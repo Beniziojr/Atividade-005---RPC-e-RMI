@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+message Num {
+    float value = 1;
+}
+
+message doisNums {
+    float value1 = 1;
+    float value2 = 2;
+}
+
+
+service Calculadora{
+    rpc soma(doisNums) returns (Num) {}
+    rpc sub(doisNums) returns (Num) {}
+    rpc multi(doisNums) returns (Num) {}
+    rpc div(doisNums) returns (Num) {}
+    rpc raiz_quad(Num) returns (Num) {}
+    rpc exp(doisNums) returns (Num) {}
+    rpc resto(doisNums) returns (Num) {}
+}
